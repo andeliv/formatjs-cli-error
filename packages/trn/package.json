@@ -1,0 +1,15 @@
+{
+  "name": "trn",
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.16.1",
+    "yarn": "^1.22.0"
+  },
+  "scripts": {
+    "intl:extract-all": "npx @formatjs/cli extract --throws '../**/src/**/*.{ts,tsx}' --ignore '../**/src/**/*.{d,test}.{ts,tsx}' --out-file 'pre-translate/en_US.json' --format './formatjs/formatter.js'",
+    "intl:extract-components": "npx @formatjs/cli extract --throws '../web-components/src/**/*.{ts,tsx}' --ignore '../web-components/src/**/*.{d,test}.{ts,tsx}' --out-file 'pre-translate/en_US.json' --format './formatjs/formatter.js'",
+    "intl:extract-main": "npx @formatjs/cli extract --throws '../web-main/packages/web/src/**/*.{ts,tsx}' --ignore '../web-main/packages/web/src/**/*.{d,test}.{ts,tsx}' --out-file 'pre-translate/en_US.json' --format './formatjs/formatter.js'"
+  },
+  "dependencies": {}
+}
